@@ -1,5 +1,7 @@
 # Sentry AI Agent Monitoring - Manual Instrumentation Example
 
+![Sentry AI Agent Monitoring](./public/custom-llm-monitoring.png)
+
 <div align="center">
 
 **A complete reference implementation demonstrating manual instrumentation of AI agents using Sentry's AI Monitoring capabilities.**
