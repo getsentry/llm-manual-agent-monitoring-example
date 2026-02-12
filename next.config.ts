@@ -1,11 +1,7 @@
 import { withSentryConfig } from "@sentry/nextjs";
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  experimental: {
-    instrumentationHook: true,
-  },
-};
+const nextConfig: NextConfig = {};
 
 export default withSentryConfig(nextConfig, {
   // For all available options, see:
@@ -29,8 +25,10 @@ export default withSentryConfig(nextConfig, {
   // side errors will fail.
   tunnelRoute: "/monitoring",
 
-  // Hides source maps from generated client bundles
-  hideSourceMaps: true,
+  // Control source map upload behavior
+  sourcemaps: {
+    disable: false,
+  },
 
   // Automatically tree-shake Sentry logger statements to reduce bundle size
   disableLogger: true,
